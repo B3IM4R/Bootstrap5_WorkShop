@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Styles/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+        <title>Contenido Educativo</title>
+    </head>
+    <header>
+      <div class="fixed-top">
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">EduNet | Profesores</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav nav-underline ms-auto text-center">
+                <a class="nav-link" href="profile.html">Perfil</a>
+                <a class="nav-link" href="register.html">Registro</a>
+                <a class="nav-link active" href="#">Contenido Educativo</a>
+                <a class="nav-link" href="support.html">Soporte</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <div class="container mt-5 pt-4 pt-md-5 mb-3">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-12 col-lg-10 col-xl-9 col-xxl-8 p-sm-0">
+              <div class="card rounded-4 m-sm-0">
+                  <div class="card-body p-4 pb-4 pb-sm-5 p-sm-4 p-md-5 p-lg-5 p-xl-5 p-xxl-5 pt-sm-4 pt-md-4 pt-lg-4 pt-xl-4 pt-xxl-4">
+                      <h2 class="pb-2 pb-md-4 pt-0 pt-sm-3" id="login">Contenido Educativo</h2>
+                      <form class="row" id="form">
+                        <div class="mb-3">
+                          <label for="inputName" class="form-label fw-medium">Título</label>
+                          <input type="text" class="bg-light form-control" id="inputName" placeholder="Escribe aquí">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label fw-medium">Descripción</label>
+                            <textarea class="bg-light form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Escribe aquí"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label fw-medium">Asignatura</label>
+                            <input type="text" class="bg-light form-control" id="inputName" placeholder="Escribe aquí">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label fw-medium">Recursos Necesarios</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="public" class="form-label fw-medium">Fecha de Publicación</label>
+                            <input type="date" id="nacimiento" name="public" class="bg-light form-control">
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <label for="public" class="form-label fw-medium">Fecha de Cierre</label>
+                            <input type="date" id="nacimiento" name="public" class="bg-light form-control">
+                        </div>
+                        <div class="d-grid gap-2 d-sm-block mt-2">
+                        <button class="btn btn-primary me-4 ms-4 ms-sm-0 me-sm-2 pe-4 ps-4 rounded-3" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Publicar</button>
+                        <button class="btn btn-danger me-4 ms-4 ms-sm-0 me-sm-0 pe-4 ps-4 rounded-3" type="button" onclick="limpiarFormulario()">Cancelar</button>
+                        </div>
+                      </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="alert alert-dismissible m-0 p-4" role="alert">
+              <h3 class="pb-2" id="sistema">Sistema <br></h3> <hr>
+              <div class="alert alert-success" role="alert">
+                Tu Publicación Fue Exitosa
+              </div>
+              <hr>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn btn-danger float-end ms-2" data-bs-dismiss="modal">Cerrar</button>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <script>
+        function limpiarFormulario() {
+            // Seleccionamos el formulario por su ID y lo reseteamos
+            document.getElementById("form").reset();
+        }
+    </script>
+    </body>
+</html>

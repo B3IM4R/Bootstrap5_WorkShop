@@ -1,0 +1,15 @@
+body {
+    background-color: #9ECFFF;
+}
+
+nav {
+    background-color: #576B80;
+}
+
+#Register, #login, #sistema, label {
+    color: #2C4055;
+}
+
+.checked {
+    color: orange;
+}
